@@ -26,6 +26,7 @@ public class Ghost
 	float rotation;
 	float AI;
 	
+	double substance; // added new variable
 
 	public Ghost(float xSpawn, float zSpawn, float rotation)
 	{
@@ -48,6 +49,16 @@ public class Ghost
 		xSpeed = (float)Math.cos(rotation*Math.PI/180f)/speedInv;
 		zSpeed = (float)Math.sin(rotation*Math.PI/180f)/speedInv;
 		AI = 2;
+	
+		substance =  (x + y) / 3.14; // => calculates the covering area of the field and ghosts
+		calculate(substance);
+	
+	}
+	
+	public void calculate(double substance)
+	{
+		substance = substance + 100;
+		System.out.println(substance);
 	}
 	
 	public void setAI(int AI)
