@@ -221,6 +221,9 @@ public class GameFrame
 			}
 
 		});
+		
+		//set the whole frame visible to the user 
+		System.out.println("method was excecuted"); // test 
 		client.frame.setVisible(true);
 
 		// adding exit button to the screen
